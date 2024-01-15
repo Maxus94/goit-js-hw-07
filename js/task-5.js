@@ -1,3 +1,13 @@
+const buttonChangeColor = document.querySelector('.change-color');
+const body=document.querySelector('body');
+const span = document.querySelector('.color');
+console.log(buttonChangeColor);
+buttonChangeColor.addEventListener("click", clickHandler);
+function clickHandler(){
+  body.style.backgroundColor = getRandomHexColor();
+span.textContent = body.style.backgroundColor;
+}
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
